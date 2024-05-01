@@ -14,7 +14,7 @@ const Navbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.get(
-        "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/user/logout",
+        "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com:4000/api/v1/user/logout",
         {
           withCredentials: true,
         }

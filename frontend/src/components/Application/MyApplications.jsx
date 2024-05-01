@@ -19,7 +19,7 @@ const MyApplications = () => {
       if (user && user.role === "Employer") {
         axios
           .get(
-            "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/employer/getall",
+            "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com:4000/api/v1/application/employer/getall",
             {
               withCredentials: true,
             }
@@ -30,7 +30,7 @@ const MyApplications = () => {
       } else {
         axios
           .get(
-            "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/jobseeker/getall",
+            "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com:4000/api/v1/application/jobseeker/getall",
             {
               withCredentials: true,
             }
@@ -52,7 +52,7 @@ const MyApplications = () => {
     try {
       axios
         .delete(
-          `http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/delete/${id}`,
+          `http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com:4000/api/v1/application/delete/${id}`,
           {
             withCredentials: true,
           }

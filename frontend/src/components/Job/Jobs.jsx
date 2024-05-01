@@ -11,7 +11,7 @@ const Jobs = () => {
     try {
       axios
         .get(
-          "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/job/getall",
+          "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com:4000/api/v1/job/getall",
           {
             withCredentials: true,
           }

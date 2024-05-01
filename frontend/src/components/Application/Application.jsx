@@ -35,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/post",
+        "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com:4000/api/v1/application/post",
         formData,
         {
           withCredentials: true,
