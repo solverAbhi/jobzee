@@ -31,7 +31,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        "http://localhost:4000/api/v1/job/post",
+        "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/job/post",
         fixedSalary.length >= 4
           ? {
               title,

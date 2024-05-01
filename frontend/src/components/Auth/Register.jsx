@@ -23,7 +23,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+        "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/user/register",
         { name, phone, email, role, password },
         {
           headers: {
@@ -44,10 +44,9 @@ const Register = () => {
     }
   };
 
-  if(isAuthorized){
-    return <Navigate to={'/'}/>
+  if (isAuthorized) {
+    return <Navigate to={"/"} />;
   }
-
 
   return (
     <>

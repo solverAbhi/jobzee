@@ -10,9 +10,12 @@ const Jobs = () => {
   useEffect(() => {
     try {
       axios
-        .get("http://localhost:4000/api/v1/job/getall", {
-          withCredentials: true,
-        })
+        .get(
+          "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/job/getall",
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           setJobs(res.data);
         });

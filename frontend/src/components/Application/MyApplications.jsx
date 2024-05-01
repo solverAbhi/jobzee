@@ -18,17 +18,23 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          .get("http://localhost:4000/api/v1/application/employer/getall", {
-            withCredentials: true,
-          })
+          .get(
+            "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/employer/getall",
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             setApplications(res.data.applications);
           });
       } else {
         axios
-          .get("http://localhost:4000/api/v1/application/jobseeker/getall", {
-            withCredentials: true,
-          })
+          .get(
+            "http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/jobseeker/getall",
+            {
+              withCredentials: true,
+            }
+          )
           .then((res) => {
             setApplications(res.data.applications);
           });
@@ -45,9 +51,12 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`http://localhost:4000/api/v1/application/delete/${id}`, {
-          withCredentials: true,
-        })
+        .delete(
+          `http://ec2-16-170-98-90.eu-north-1.compute.amazonaws.com/api/v1/application/delete/${id}`,
+          {
+            withCredentials: true,
+          }
+        )
         .then((res) => {
           toast.success(res.data.message);
           setApplications((prevApplication) =>
